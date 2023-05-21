@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ICT FINAL PROJECT</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+	background-color: #88aed0;
+}
+</style>
+</head>
+<body> 
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container form-control" style="background-color: #BFD4DB;">
+<br>
+    <center><h1 style="color: #4f77aa ; font-family: 'Playfair Display', serif;">Unit Conversion</h1></center>
+<hr>
+<br>
+    <div class="row">
+        <label>
+            <h2 style="color: #4f77aa ; font-family: 'Playfair Display', serif;">Pick A Measurement</h3>
+        </label>
+        
+        <select  class="form-select form-select-lg">
+
+            <option value="index.html" selected="">Length</option>
+       
+
+        </select>
+
+    </div>
+
+    <br>
+    
+    <div class="row align-items-center">
+
+        <div class="col-md-5">
+            
+            <h4 style="color: #414c6b; font-family: 'Playfair Display', serif;">
+                Input Desired Value:
+            </h4>
+
+            <input type="number" class="form-control" name="mm" placeholder="Millimeters converted to...">
+            
+        </div>
+
+        <div class="col-md-2 col2">
+            
+            <h1 class="text-center">=</h1>
+            
+        </div>
+
+        <div class="col-md-5">
+            
+            <h4 style="color: #414c6b; font-family: 'Playfair Display', serif;s">
+                Output: 
+            </h4>
+            
+            <input type="number" class="form-control" name="output" disabled="" placeholder="output">
+            
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <center> <div class="row align-items-center">
+        
+        <div class="col-md-4">
+            <button class="btn btn-primary" onclick="cmeter()">Centimeters</button>
+        </div>
+
+        <div class="col-md-4">
+            <button class="btn btn-primary" onclick="meter()">Meters</button>
+        </div>
+
+        <div class="col-md-4">
+            <button class="btn btn-primary" onclick="kmeter()">Kilometers</button>
+        </div>
+
+    </div> </center>
+<br>
+</div>
+
+<script>
+	function cmeter() {
+    
+    var base = document.getElementsByName('mm')[0].value;
+
+    var result = parseFloat(base) / 10 ;
+    
+    document.getElementsByName('output')[0].value= result;
+
+}
+
+function meter() {
+    
+    var base = document.getElementsByName('mm')[0].value;
+
+    var result = parseFloat(base) / 1000 ;
+    
+    document.getElementsByName('output')[0].value= result;
+
+}
+
+function kmeter() {
+    
+    var base = document.getElementsByName('mm')[0].value;
+
+    var result = parseFloat(base) / 1000000 ;
+    
+    document.getElementsByName('output')[0].value= result;
+
+}
+</script>
+
+
+</body>
+</html>
